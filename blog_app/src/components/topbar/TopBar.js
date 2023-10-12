@@ -5,6 +5,7 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 import SearchIcon from '@mui/icons-material/Search';
 import PinterestIcon from '@mui/icons-material/Pinterest';
 import InstagramIcon from '@mui/icons-material/Instagram';
+import { Link } from "react-router-dom";
 
 export default function TopBar() {
   return (
@@ -17,10 +18,10 @@ export default function TopBar() {
       </div>
       <div className="topCenter">
         <ul className="topList">
-          <li className="topListItem">HOME</li>
+          <li className="topListItem"><Link to="/" style={{textDecoration:"none"}}>Home</Link></li>
           <li className="topListItem">ABOUT</li>
           <li className="topListItem">CONTACT</li>
-          <li className="topListItem">WRITE</li>
+          <li className="topListItem"><Link to="/write" style={{textDecoration:"none"}}>WRITE</Link></li>
           <li className="topListItem">LOGOUT</li>
         </ul>
       </div>
