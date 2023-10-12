@@ -16,7 +16,7 @@ export default function Settings() {
                 <div className="settingsPP">
                     <img src="../../../images/3.jpg" alt="" className="settingsImg" />
                     <label htmlFor="fileInput">
-                        <AccountCircleIcon/>
+                        <AccountCircleIcon className='settingsPPIcon'/>
                     </label>
                     <input type="file" id='fileInput' style={{display:"none"}} />
                 </div>
