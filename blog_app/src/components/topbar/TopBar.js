@@ -18,15 +18,15 @@ export default function TopBar() {
       </div>
       <div className="topCenter">
         <ul className="topList">
-          <li className="topListItem"><Link to="/" style={{textDecoration:"none"}}>Home</Link></li>
+          <li className="topListItem"><Link to="/home" style={{textDecoration:"none"}}>Home</Link></li>
           <li className="topListItem">ABOUT</li>
           <li className="topListItem">CONTACT</li>
           <li className="topListItem"><Link to="/write" style={{textDecoration:"none"}}>WRITE</Link></li>
-          <li className="topListItem">LOGOUT</li>
+          <li className="topListItem"><Link to="/" style={{textDecoration:"none"}}>LOGOUT</Link></li>
         </ul>
       </div>
       <div className="topRight">
-        <img src="../../images/me.jpg" alt="" className="topImage" />
+      <Link to="/settings" style={{textDecoration:"none"}}><img src="../../images/me.jpg" alt="" className="topImage" /></Link>
         <SearchIcon className="topSearchIcon"/>
       </div>
     </div>

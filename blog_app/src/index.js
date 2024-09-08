@@ -6,23 +6,23 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import Register from './pages/register/Register';
 import Login from './pages/login/Login';
 import Settings from './pages/settings/Settings';
 import Single from './pages/single/Single';
+import Home from './pages/home/Home';
 
 const router = createBrowserRouter([
   {
-    path: "/",
-    element: <App/>,
+    path: "/home",
+    element: <Home/>,
   },
   {
     path: "/write",
     element: <Write/>,
   },
   {
-  path: "/register",
-    element: <Register/>,
+  path: "/",
+    element: <App/>,
   },
   {
   path: "/login",

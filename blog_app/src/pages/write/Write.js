@@ -1,9 +1,12 @@
 import React from 'react'
 import './write.css'
 import AddIcon from '@mui/icons-material/Add';
+import TopBar from '../../components/topbar/TopBar';
 
 export default function Write() {
   return (
+    <>
+    <TopBar/>
     <div className='write'>
         <img src="../images/2.jpg" alt="" className="writeImg" />
         <form className="writeForm">
@@ -20,5 +23,6 @@ export default function Write() {
             <button className="writeSubmit">Publish</button>
         </form>
     </div>
+    </>
   )
 }

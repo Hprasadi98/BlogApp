@@ -1,7 +1,9 @@
 import React from 'react'
 import './login.css'
+import {useNavigate} from 'react-router-dom'
 
 export default function Login() {
+  const navigate = useNavigate();
   return (
     <div className='login'>
         <span className="loginTitle">Login</span>
@@ -10,9 +12,9 @@ export default function Login() {
             <input type="text" className='loginInput' placeholder='Enter your email...'/>
             <label>Password</label>
             <input type="password" className='loginInput' placeholder='Enter your password...'/>
-            <button className="loginButton">Login</button>
+            <button className="loginButton" onClick={()=>navigate('/home')}>Login</button>
         </form>
-        <button className="loginRegisterButton">Register</button>
+        <button className="loginRegisterButton" onClick={()=>navigate('/')}>Register</button>
     </div>
   )
 }

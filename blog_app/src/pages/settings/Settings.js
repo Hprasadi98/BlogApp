@@ -2,9 +2,12 @@ import React from 'react'
 import './settings.css'
 import SideBar from '../../components/sidebar/SideBar'
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import TopBar from '../../components/topbar/TopBar';
 
 export default function Settings() {
   return (
+    <>
+    <TopBar/>
     <div className='settings'>
         <div className="settingsWrapper">
             <div className="settingsTitle">
@@ -31,5 +34,6 @@ export default function Settings() {
         </div>
         <SideBar/>
     </div>
+    </>
   )
 }

@@ -1,9 +1,11 @@
 import React from 'react'
 import './post.css'
+import { useNavigate } from 'react-router-dom'
 
 export default function Post() {
+  const navigate = useNavigate();
   return (
-    <div className='post'>
+    <div className='post' onClick={()=>navigate('/single')}>
         <img src="../../images/2.jpg" alt="" className="postImg" />
         <div className="postInfo">
             <div className="postCats">
