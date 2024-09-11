@@ -7,7 +7,7 @@ const app = express();
 app.use(express.json())
 app.use(cors())
 
-mongoose.connect('mongodb://localhost/blogDB')
+mongoose.connect('mongodb+srv://hasithaprasadini:hasitha1234@cluster0.x6kxn.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
 
 app.post('/register', (req, res) =>{
     customerModel.create(req.body)

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./register.css";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 export default function Register() {
   const [name , setName] = useState("");
@@ -9,6 +10,10 @@ export default function Register() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    axios.post('http://localhost:3000/register', {name, email, password})
+    .then(result => {console.log(result)
+      navigate('/login');
+    })
     console.log(name, email, password);
   };
 
