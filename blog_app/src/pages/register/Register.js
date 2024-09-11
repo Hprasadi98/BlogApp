@@ -1,23 +1,54 @@
-import React from 'react'
-import './register.css'
-import { useNavigate } from 'react-router-dom'
+import React, { useState } from "react";
+import "./register.css";
+import { useNavigate } from "react-router-dom";
 
 export default function Register() {
+  const [name , setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(name, email, password);
+  };
+
   const navigate = useNavigate();
 
   return (
-    <div className='register'>
-        <span className="registerTitle">Register</span>
-        <form className="registerForm">
-            <label>Username</label>
-            <input type="text" className='registerInput' placeholder='Enter your username...'/>
-            <label>Email</label>
-            <input type="text" className='registerInput' placeholder='Enter your email...'/>
-            <label>Password</label>
-            <input type="password" className='registerInput' placeholder='Enter your password...'/>
-            <button className="registerButton" onClick={()=>navigate('./login')}>Register</button>
-        </form>
-        <button className="registerLoginButton" onClick={()=>navigate('./login')}>Login</button>
+    <div className="register">
+      <span className="registerTitle">Register</span>
+      <form className="registerForm" onSubmit={handleSubmit}>
+        <label>Username</label>
+        <input
+          type="text"
+          className="registerInput"
+          placeholder="Enter your username..."
+          onChange={(e) => setName(e.target.value)}
+        />
+        <label>Email</label>
+        <input
+          type="text"
+          className="registerInput"
+          placeholder="Enter your email..."
+          onChange={(e) => setEmail(e.target.value)}
+        />
+        <label>Password</label>
+        <input
+          type="password"
+          className="registerInput"
+          placeholder="Enter your password..."
+          onChange={(e) => setPassword(e.target.value)}
+        />
+        <button className="registerButton" type="submit">
+          Register
+        </button>
+      </form>
+      <button
+        className="registerLoginButton"
+        onClick={() => navigate("./login")}
+      >
+        Login
+      </button>
     </div>
-  )
+  );
 }
